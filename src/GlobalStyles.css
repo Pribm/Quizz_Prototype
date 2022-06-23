@@ -64,6 +64,14 @@ body{
     justify-content: center;
 }
 
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
 .card{
     background-color: white;
     box-shadow: 0 10px 15px rgba(0, 0, 0, .5);
@@ -79,6 +87,11 @@ body{
     min-width: 25vw;
 }
 
+.min-w-mobile{
+    min-width: 380px;
+    max-width: 440px;
+}
+
 .align-items-center{
     align-items: center;
 }
@@ -86,6 +99,11 @@ body{
 .min-vh-75{
     min-height: 75vh;
 }
+
+.w-75{
+    width: 75%;
+}
+
 
 .debug{
     border: solid red;
