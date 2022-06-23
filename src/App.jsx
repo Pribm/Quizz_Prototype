@@ -7,9 +7,11 @@ const App = () => {
     const screen = React.useRef(null)
 
    React.useEffect(() => {
-    screen.current.addEventListener('click', function() {
-        screen.current.requestFullscreen();
-    })
+    if(screen.current.clientWidth < 768){
+        screen.current.addEventListener('click', function() {
+            screen.current.requestFullscreen();
+        }, false)
+    }
    }, [])
 
     return (
