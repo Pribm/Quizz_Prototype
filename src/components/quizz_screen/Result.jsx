@@ -42,16 +42,16 @@ const Result = ({restart, correctAnswers, setViewAnswers, viewAnswers}) => {
             {
                 totalStars > 3 ?
                 <>
-                    <h1>Congratulations, You dig it!</h1>
-                    <Animation animation={trophy} height='80%' loop={false}/>
+                    <h1 className='result__image-text'>Congratulations, You dig it!</h1>
+                    <Animation animation={trophy} height='50%' loop={false}/>
                 </>
                 :
                 <>
-                    <h1>Too bad, you can do better next time!</h1>
-                    <Animation animation={failure} height='80%'loop={true}/>
+                    <h1 className='result__image-text'>Too bad, you can do better next time!</h1>
+                    <Animation animation={failure} height='50%'loop={true}/>
                 </>
             }
-            <Animation animation={fiveStars} height='20%' stopFrame={totalStarFrames || 15} loop={false}/>
+            <Animation animation={fiveStars} height='4rem' stopFrame={totalStarFrames || 15} loop={false}/>
         </div>
         <div className="result__info">
             <h1>Results:</h1>

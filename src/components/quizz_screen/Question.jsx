@@ -11,7 +11,7 @@ const Question = ({ currentQuestion, questions, setAnswer, handleAnswer }) => {
       <motion.div
         animate={controls}
         className='quizz__container-content'>
-        <div className='quizz__questionContainer-wrapper'>
+        <div className='quizz__questionContainer-wrapper '>
           <div className="quizz__questionContainer">
             <div className='quizz__questionContainer-header'>
               <span>Questions</span><span>{currentQuestion + 1}</span><span>/10</span>
