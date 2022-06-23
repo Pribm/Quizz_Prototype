@@ -1,0 +1,145 @@
+.quizz{
+    width: 100vw;
+    background: linear-gradient(23deg, rgba(142,0,249,1) 0%, rgba(84,0,167,1) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        
+        &-content{
+
+            display: flex;
+            padding: 0 5rem;
+            min-height: 60vh;
+            color: white;
+            justify-content: center;
+            width: 70%;
+
+            flex-direction: column;
+
+            @media screen and (max-width: 575px) {
+                width: 100vw;
+                min-height: 100vh;
+                padding: 0 2rem;
+            }
+        }
+
+    }
+
+    &__questionContainer{
+        border-right: .2rem solid rgb(91, 181, 31);
+        padding-right: 2rem;
+        margin-right: 4rem;
+        flex: 1;
+        
+
+        &-wrapper{
+
+            display: flex;
+
+            @media screen and (max-width: 575px) {
+                flex-direction: column;
+                margin-top: auto;
+            }
+
+        }
+
+        @media screen and (max-width: 575px) {
+            border-right: none;
+        }
+
+        &-header{
+            font-size: 3rem;
+
+            :first-child{
+                font-size: 2rem;
+                margin-right: 1rem;
+            }
+            :nth-child(2){
+                font-size: 5rem;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        &-body{
+            font-size: 3rem;
+
+            @media screen and (max-width: 475px) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__answerContainer{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+       
+        
+        @media screen and (min-width: 475px) {
+            width: 100%;
+        }
+        &-answer{
+            text-transform: capitalize;
+            font-size: 1.8rem;
+            border: solid white .5px;
+            background-color: transparent;
+            color: white;
+            padding: 2rem 3rem;
+            border-radius: 2rem;
+            margin: 2rem 0;
+            transition: all .2s ease-in;
+            z-index: 5;
+
+            &:focus{
+                background-color: white;
+                color: rgb(76, 8, 139);
+            }
+
+            &:hover{
+                background-color: white;
+                color: rgb(76, 8, 139);
+                transform: translateX(1rem);
+                cursor: pointer;
+            }
+
+            @media screen and (max-width: 475px) {
+                padding: 1.4rem 2rem;
+                margin: .5rem 0;
+            }
+        }
+    }
+
+    &__confirmButton{
+
+        margin-top: auto;
+        margin-bottom: 2rem;
+        text-align: center;
+        & button{
+            background: linear-gradient(23deg, rgba(112,142,0,1) 0%, rgba(48,121,57,1) 100%);
+            color: rgb(255, 255, 255);
+            padding: 2rem 6rem;
+            font-size: 2rem;
+            border: none;
+            outline: none;
+            font-weight: 300;
+            border-radius: 4rem;
+            cursor: pointer;
+
+            @media screen and (max-width: 475px) {
+                padding: 1rem 2rem;
+            }
+        }
+    }
+}
+
